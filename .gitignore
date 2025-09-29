@@ -1,0 +1,8 @@
+work/
+*.deb
+*.axmodel
+*.bin
+*.zip
+*.img
+__pycache__/
+.DS_Store
