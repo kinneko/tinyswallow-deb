@@ -1,0 +1,6 @@
+Package: llm-model-tinyswallow-1.5b-ax630c
+Version: 1.0.0
+Architecture: arm64
+Maintainer: kinneko <kinneko@gmail.com>
+Description: TinySwallow-1.5B model for M5Stack ModuleLLM.
+ This model is developed by Sakana AI.
