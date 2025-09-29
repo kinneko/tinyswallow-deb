@@ -3,10 +3,15 @@
 # 既定は work/ を無視
 work/**
 
-# 親ディレクトリを段階的に再許可
+# ただしメタ類は段階的に許可
+!work/DEBIAN/**
 !work/opt/
 !work/opt/m5stack/
 !work/opt/m5stack/data/
+!work/opt/m5stack/data/models/
+!work/opt/m5stack/data/models/*.json
+!work/opt/m5stack/scripts/
+!work/opt/m5stack/scripts/*.py
 !work/opt/m5stack/data/tinyswallow-1.5b-ax630c/
 
 # それでも大物は原則無視
@@ -15,6 +20,17 @@ work/**/*.deb
 # axmodel/bin はこのディレクトリに限り許可（LFSで管理）
 !work/opt/m5stack/data/tinyswallow-1.5b-ax630c/*.axmodel
 !work/opt/m5stack/data/tinyswallow-1.5b-ax630c/model.embed_tokens.weight.bfloat16.bin
+
+# tinyswallow 配下のjson（tokenizer含む）を許可
+!work/opt/m5stack/data/tinyswallow-1.5b-ax630c/
+!work/opt/m5stack/data/tinyswallow-1.5b-ax630c/*.json
+!work/opt/m5stack/data/tinyswallow-1.5b-ax630c/tokenizer/
+!work/opt/m5stack/data/tinyswallow-1.5b-ax630c/tokenizer/*.json
+
+# それ以外の重い生成物は引き続き除外
+work/**/*.axmodel
+work/**/*.bin
+*.deb
 
 # その他のゴミ
 __pycache__/
