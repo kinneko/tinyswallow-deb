@@ -1,8 +1,21 @@
-work/
-*.deb
-*.axmodel
-*.bin
 *.zip
 *.img
+# 既定は work/ を無視
+work/**
+
+# 親ディレクトリを段階的に再許可
+!work/opt/
+!work/opt/m5stack/
+!work/opt/m5stack/data/
+!work/opt/m5stack/data/tinyswallow-1.5b-ax630c/
+
+# それでも大物は原則無視
+work/**/*.deb
+
+# axmodel/bin はこのディレクトリに限り許可（LFSで管理）
+!work/opt/m5stack/data/tinyswallow-1.5b-ax630c/*.axmodel
+!work/opt/m5stack/data/tinyswallow-1.5b-ax630c/model.embed_tokens.weight.bfloat16.bin
+
+# その他のゴミ
 __pycache__/
 .DS_Store
