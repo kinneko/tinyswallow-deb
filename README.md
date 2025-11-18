@@ -6,3 +6,6 @@ Module LLM上で動作するLLMモデル、tinyswallowをdebパッケージ化�
 
 Module LLM 日本語で使ってみた - 2025年9月編 - - kinnekoの薄い本屋 - BOOTH  
 https://kinneko.booth.pm/items/7432109
+
+debパッケージは大きすぎてリポジトリには入れられないので、右側のReleasesからダウンロードして使ってください。
+
